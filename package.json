@@ -1,0 +1,17 @@
+{
+  "name": "npm_sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init:sass": "node-sass content/scss/style.scss content/css/style.css --output-style compressed -w",
+    "start": "npm run init:sass"
+  },
+  "author": "Robson Klein",
+  "license": "ISC",
+  "dependencies": {
+    "jquery-toast-plugin": "^1.3.2",
+    "node-sass": "^7.0.1"
+  }
+}
