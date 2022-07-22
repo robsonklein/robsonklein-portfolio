@@ -1,5 +1,5 @@
-## Instaklar
+## Install project
 `npm install`
 
-## Rodar e compilar o sass
+## Run and css generator
 `npm run start`
