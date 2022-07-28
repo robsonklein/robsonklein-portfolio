@@ -16,15 +16,15 @@ $ff:'Poppins', sans-serif;
 .text-center, .tc{text-align: center;}
 .text-left, .tl{text-align: left;}
 .text-right, .tr{text-align: right;}
-@mixin uc{text-transform: uppercase;}
-.uc{text-transform: uppercase;}
 
-// Cores
+// Cores Tema
 $primary: #335878;
 $secondary: #28374D;
 $dark-body: #333;
 $display: #F5707D;
 $offwhite: #EFEBEC;
+
+// Cores Default
 $red:#e74c3c;
 $orange:#fdcb6e;
 $green:#00b894;
@@ -37,8 +37,6 @@ $purple:#8e44ad;
 .tc-display{@include tc-display()}
 
 // Mixins
-@mixin relative{position: relative;}
-@mixin absolute{position: absolute;}
 @mixin flex{display: flex;}
 @mixin transition{transition: all .3s ease;}
 @mixin link {
