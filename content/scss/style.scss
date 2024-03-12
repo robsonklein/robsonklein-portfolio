@@ -431,6 +431,14 @@ hr{
             }
         }
 
+        ul, li{
+            a{
+                color: rgba($display, .7);
+                //color: #fff;
+                text-decoration: underline;
+            }
+        }
+
         @include media-breakpoint-custom-down(sm){
             .push-sm-right{
                 margin-top: 3rem;
