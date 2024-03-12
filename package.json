@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "sass content/scss/style.scss content/styles/css/style.css",
-    "watch-css": "sass --watch content/scss/style.scss content/styles/css/style.css",
+    "build-css": "sass content/scss/style.scss content/css/style.css",
+    "watch-css": "sass --watch content/scss/style.scss content/css/style.css",
     "start": "npm run build-css && npm run watch-css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

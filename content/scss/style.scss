@@ -290,8 +290,7 @@ hr{
                 }
             }
             .caption{
-                @include f18;
-                letter-spacing: .052em;
+                @include f21();                
                 margin: 0;
             }
             .about{
@@ -346,7 +345,6 @@ hr{
                         flex: none;
                         margin: .3rem .3rem;
                         width: calc(50% - .6rem);
-                        min-width: 220px;
                     }
                 }
             }
