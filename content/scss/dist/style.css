@@ -1224,27 +1224,31 @@ body {
 a:not(.link-media) {
   position: relative;
   color: #F5707D;
-  text-decoration: none;
   display: inline-block;
   width: auto;
   transition: all 0.3s ease;
 }
-a:not(.link-media)::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #F5707D;
-  bottom: 0;
-  z-index: -1;
-  transition: all 0.3s ease;
-}
-a:not(.link-media):hover {
-  color: #28374D;
-}
-a:not(.link-media):hover::after {
-  height: 100%;
+@media (min-width: 992px) {
+  a:not(.link-media) {
+    text-decoration: none;
+  }
+  a:not(.link-media)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #F5707D;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+  a:not(.link-media):hover {
+    color: #28374D;
+  }
+  a:not(.link-media):hover::after {
+    height: 100%;
+  }
 }
 
 p {
@@ -1411,7 +1415,7 @@ hr {
   }
 }
 .section-landing .jumbotron h2 {
-  margin: 0.3em 0 0;
+  margin: 0;
   font-size: 2rem;
   font-weight: normal;
   letter-spacing: 0.052em;
@@ -1440,6 +1444,13 @@ hr {
   flex-wrap: wrap;
   margin: 0 0 1rem;
 }
+@media (min-width: 992px) {
+  .section-landing .jumbotron nav .breack {
+    display: block;
+    width: 100%;
+    flex: none;
+  }
+}
 .section-landing .jumbotron nav a {
   text-decoration: none;
   position: relative;
@@ -1452,7 +1463,7 @@ hr {
   text-transform: uppercase;
   letter-spacing: 0.092em;
   padding: 0.8em 1.2em;
-  margin: 0 0.3rem;
+  margin: 0.4rem 0.3rem;
   background: #F5707D;
   border-radius: 2em;
   transition: all 0.3s ease;
@@ -1485,7 +1496,7 @@ hr {
   .section-landing .jumbotron nav a {
     flex: none;
     margin: 0.3rem 0.3rem;
-    width: calc(50% - .6rem);
+    min-width: fit-content;
   }
 }
 @media (max-width: 767px) {
@@ -1498,9 +1509,17 @@ hr {
   padding-top: 0.5rem;
 }
 .section-skills h4 {
-  font-size: 1.125rem;
+  font-size: 1.312rem;
   font-weight: normal;
   margin: 0 0 1em;
+}
+.section-skills h4::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: #F5707D;
+  margin: 0 0 0.5em;
 }
 .section-skills ol {
   padding: 0;
@@ -1530,21 +1549,28 @@ hr {
   height: 100%;
   top: 0;
   left: 0;
-  background: #00b894;
+  background: #F5707D;
   display: block;
   width: 3px;
 }
-.section-skills .list-works li span {
-  font-size: 0.88rem;
-}
 .section-skills .skill-tag {
-  font-size: 0.88rem;
   display: inline-block;
   margin: 0.2em 0.2em;
   background: black;
   background: #111;
   padding: 0.2em 0.8em;
+  padding-left: 0.4em;
   border-radius: 3px;
+}
+.section-skills .skill-tag::before {
+  content: "";
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  border-radius: 100%;
+  vertical-align: middle;
+  margin-right: 0.4em;
+  background: #F5707D;
 }
 .section-skills .list-prizes {
   margin: 0;

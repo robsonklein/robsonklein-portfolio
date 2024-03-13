@@ -42,29 +42,31 @@ $purple:#8e44ad;
 @mixin link {
     position: relative;
     @include tc-display();
-    text-decoration:none;
     display: inline-block;
     width: auto;
     @include transition();
-
-    &::after{
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background: $display;
-        bottom: 0;
-        z-index: -1;
-        @include transition();
-    }
-
-    &:hover{
-        color: $secondary;
+    
+    @include media-breakpoint-custom-up(md){
+        text-decoration:none;
         &::after{
-            height: 100%;
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: $display;
+            bottom: 0;
+            z-index: -1;
+            @include transition();
+        }    
+        &:hover{
+            color: $secondary;
+            &::after{
+                height: 100%;
+            }
         }
     }
+
 }
 @mixin square($size) {
     height: $size;
@@ -134,7 +136,7 @@ html{
 
 body{
     @include ff;
-    font-size: 1rem;
+    @include f16;
     color: $offwhite;
     line-height: 1.4;
     background: $secondary url(../imgs/bg-noise.png);
@@ -294,7 +296,7 @@ hr{
                 }
             }
             h2{
-                margin: .3em 0 0;
+                margin: 0;
                 @include f32();
                 font-weight: normal;
                 letter-spacing: .052em;        
@@ -322,6 +324,14 @@ hr{
                 flex-wrap: wrap;
                 margin: 0 0 1rem;
 
+                .breack{
+                    @include media-breakpoint-custom-up(md){
+                        display: block;
+                        width: 100%;
+                        flex: none;
+                    }
+                }
+
                 a{
                     text-decoration: none;
                     position: relative;
@@ -334,7 +344,7 @@ hr{
                     text-transform: uppercase;
                     letter-spacing: .092em;
                     padding: .8em 1.2em;
-                    margin:0 .3rem;
+                    margin: .4rem .3rem;
                     background: $display;
                     border-radius: 2em;
                     @include transition;
@@ -362,7 +372,8 @@ hr{
                     a{
                         flex: none;
                         margin: .3rem .3rem;
-                        width: calc(50% - .6rem);
+                        //width: calc(50% - .6rem);
+                        min-width: fit-content;
                     }
                 }
             }
@@ -378,9 +389,18 @@ hr{
         padding-top: .5rem;
 
         h4{
-            @include f18;
+            @include f21;
             font-weight: normal;
             margin:  0 0 1em;
+
+            &::before{
+                content: "";
+                display: block;
+                width: 20px;
+                height: 3px;
+                background: $display;
+                margin: 0 0 .5em;               
+            }
         }
         ol{
             padding: 0;
@@ -410,23 +430,30 @@ hr{
                     height: 100%;
                     top: 0;
                     left: 0;
-                    background: $green;
+                    background: $display;
                     display: block;
                     width: 3px;
-                }
-                span{
-                    @include f14;
-                }
+                }                
             }
         }
-        .skill-tag{
-            @include f14;
+        .skill-tag{            
             display: inline-block;
             margin: .2em .2em;                    
             background: darken($color: $secondary, $amount: 96);
             background: #111;
             padding: .2em .8em;
+            padding-left: .4em;
             border-radius: 3px;
+            &::before{
+                content: "";
+                display: inline-block;
+                height: 4px;
+                width: 4px;
+                border-radius: 100%;
+                vertical-align: middle;
+                margin-right: .4em;
+                background: $display;
+            }
         }
         .list-prizes{
             margin: 0;
