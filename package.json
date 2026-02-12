@@ -13,6 +13,9 @@
   },
   "author": "Robson Klein",
   "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "jquery-toast-plugin": "^1.3.2"
   },
