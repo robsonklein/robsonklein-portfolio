@@ -1462,7 +1462,7 @@ hr {
   line-height: 100%;
   text-transform: uppercase;
   letter-spacing: 0.092em;
-  padding: 0.8em 1.2em;
+  padding: 0.62em 0.86em;
   margin: 0.4rem 0.3rem;
   background: #F5707D;
   border-radius: 2em;
@@ -1476,21 +1476,14 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.6em;
 }
-.section-landing .jumbotron nav .link-media::after {
-  position: relative;
-  top: -1px;
-  margin-left: 0.6em;
-  content: "";
-  line-height: 100%;
-  display: block;
-  vertical-align: middle;
-  height: 0.86em;
-  width: 0.86em;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='22' viewBox='0 0 24 22'%3E%3Cpath id='Caminho_2' data-name='Caminho 2' d='M21,13V23H0V4H12V6H2V21H19V13ZM24,1H13.012l4.035,4L10.07,12.07,12.9,14.9l6.977-7.07L24,12Z' transform='translate(0 -1)' fill='%2328374d'/%3E%3C/svg%3E%0A");
+.section-landing .jumbotron nav .link-media .icon {
+  line-height: 0;
+}
+.section-landing .jumbotron nav .link-media .icon svg {
+  width: 28px;
+  height: 28px;
 }
 @media (max-width: 767px) {
   .section-landing .jumbotron nav a {

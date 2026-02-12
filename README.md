@@ -1,8 +1,13 @@
 ## Install project
 `npm install`
 
-## Run and css generator
-`npm run start`
+## Build site (SCSS + 11ty)
+`npm run build`
 
-## Force Scss Install
-`npm install sass --save-dev`
+## Development
+1. Terminal 1 (SCSS watcher): `npm run watch-css`
+2. Terminal 2 (11ty server): `npm run dev`
+
+## Netlify
+- Build command: `npm run build`
+- Publish directory: `_site`

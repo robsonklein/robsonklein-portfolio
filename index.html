@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -57,13 +60,18 @@
                         <h3 class="caption">As a Senior Frontend Developer Designer <strong>over 11 years of experience</strong>, I'm here to share my <a href="#expertises" title="Expertises - Robson Klein">expertises</a> and <a href="#skills" title="Skills - Robson Klein">skills</a>.</h3>
                     </div>                   
                     <nav>
-                        <a class="link-media link-likedin" href="https://www.linkedin.com/in/robsonklein/" target="_blank" title="Contact Linkedin - Robson Klein">Linkedin</a>
-                        <a class="link-media link-email" href="mailto:robsonklein23@gmail.com" title="Contact Email - Robson Klein">Email</a>
-                        <a class="link-media link-wa" href="https://api.whatsapp.com/send?phone=5551999411264&text=Hi%20Robson!%20I%20was%20looking%20at%20your%20portfolio%20and%20I%20wanted%20to%20talk%20to%20you%20about%20%E2%80%A6" target="_blank" title="Contact Whatsapp - Robson Klein">Whatsapp</a>                        
-                        <span class="breack"></span>
-                        <a class="link-media link-behance" href="https://www.behance.net/robsonklein" target="_blank" title="Behance - Robson Klein">Behance</a>
-                        <a class="link-media link-codpen" href="https://codepen.io/robsonklein23" target="_blank" title="Codepen - Robson Klein">Codepen</a>
-                        <a class="link-media link-github" href="https://github.com/robsonklein?tab=repositories" target="_blank" title="Github - Robson Klein">Github</a>
+                        {% for item in navigation.links %}
+                        <a class="link-media link-{{ item.slug }}" 
+                            href="{{ item.href }}"
+                            target="_blank" rel="noopener noreferrer" 
+                            title="{{ item.label }}">     
+                            <div class="icon">
+                                {% include "content/icons/" + item.slug + ".svg" ignore missing %}
+                            </div>                       
+                            {{ item.label }}
+                        </a>
+                        {% if item.breakAfter %}<span class="breack"></span>{% endif %}
+                        {% endfor %}
                     </nav>
                 </div>
 

@@ -1,0 +1,25 @@
+links:
+  - label: Linkedin
+    slug: linkedin
+    href: https://www.linkedin.com/in/robsonklein/
+
+  - label: Email
+    slug: email
+    href: mailto:robsonklein23@gmail.com    
+
+  - label: Whatsapp
+    slug: wa
+    href: https://api.whatsapp.com/send?phone=5551999411264&text=Hi%20Robson!%20I%20was%20looking%20at%20your%20portfolio%20and%20I%20wanted%20to%20talk%20to%20you%20about%20%E2%80%A6
+    breakAfter: true
+
+  - label: Behance
+    slug: behance
+    href: https://www.behance.net/robsonklein    
+    
+  - label: Github
+    slug: github
+    href: https://github.com/robsonklein?tab=repositories
+
+  - label: Codepen
+    slug: codepen
+    href: https://codepen.io/robsonklein23
